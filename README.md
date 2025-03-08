@@ -65,7 +65,7 @@ services: #непосредственно наши контейнеры
   postgres:
     image: postgres:13 #версия
     container_name: postgres
-    environment: набор переменных окружения
+    environment: #набор переменных окружения
       POSTGRES_USER: admin #логин
       POSTGRES_PASSWORD: admin #пароль
       POSTGRES_DB: db #название базы
@@ -181,10 +181,7 @@ sudo docker exec -it postgres bash
 ```sh
 psql -U admin db
 ```
-Если вдруг psql не работает, устанавливаем:
-```
-sudo apt install postgresql postgresql-contrib
-```
+
 В дашборде Grafana должно увеличиться число активных соединений.
 
 ![изображение](https://github.com/user-attachments/assets/74005841-be24-4c87-a097-53a5646cf430)
